@@ -9,6 +9,7 @@ public class Controller : MonoBehaviour
     //Action µî·Ï
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
+    public event Action OnJumpEvent;
 
     protected virtual void Awake()
     {
@@ -23,6 +24,11 @@ public class Controller : MonoBehaviour
     public void CallLookEvent(Vector2 direction) 
     { 
         OnLookEvent?.Invoke(direction);
+    }
+
+    public void CallJumpEvent()
+    {
+        OnJumpEvent?.Invoke();
     }
 
 }

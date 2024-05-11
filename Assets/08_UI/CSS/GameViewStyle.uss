@@ -1,0 +1,24 @@
+.SettingBtn {
+    background-image: url('project://database/Assets/05_Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=1054777628&guid=94a7bbcf1ad0f5749b44fcaa967de301&type=3#Sprite sheet for Basic Pack_80');
+    background-color: rgba(188, 188, 188, 0);
+}
+
+.SettingBtn:active {
+    background-image: url('project://database/Assets/05_Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=-2119924877&guid=94a7bbcf1ad0f5749b44fcaa967de301&type=3#Sprite sheet for Basic Pack_81');
+}
+
+.SettingBtn:hover {
+    -unity-background-image-tint-color: rgba(200, 200, 200, 0.76);
+}
+
+.ChracterBtn {
+    background-image: url('project://database/Assets/05_Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=212335338&guid=94a7bbcf1ad0f5749b44fcaa967de301&type=3#Sprite sheet for Basic Pack_118');
+}
+
+.ChracterBtn:active {
+    background-image: url('project://database/Assets/05_Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=1236103006&guid=94a7bbcf1ad0f5749b44fcaa967de301&type=3#Sprite sheet for Basic Pack_119');
+}
+
+.ChracterBtn:hover {
+    -unity-background-image-tint-color: rgba(200, 200, 200, 0.76);
+}

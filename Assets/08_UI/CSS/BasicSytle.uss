@@ -1,5 +1,5 @@
 .Button {
-    background-image: url('project://database/Assets/Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=-2077235698&guid=94a7bbcf1ad0f5749b44fcaa967de301&type=3#Sprite sheet for Basic Pack_254');
+    background-image: url('project://database/Assets/05_Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=-2077235698&guid=94a7bbcf1ad0f5749b44fcaa967de301&type=3#Sprite sheet for Basic Pack_254');
     width: 300px;
     height: 70px;
     padding-top: 0;
@@ -14,11 +14,29 @@
 }
 
 .Button:active {
-    background-image: url('project://database/Assets/Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=613517444&guid=94a7bbcf1ad0f5749b44fcaa967de301&type=3#Sprite sheet for Basic Pack_255');
+    background-image: url('project://database/Assets/05_Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=613517444&guid=94a7bbcf1ad0f5749b44fcaa967de301&type=3#Sprite sheet for Basic Pack_255');
     width: 300px;
     height: 70px;
 }
 
 .Button:hover {
     -unity-background-image-tint-color: rgba(200, 200, 200, 0.76);
+}
+
+.SquareButton {
+    width: 100px;
+    height: 100px;
+    margin-top: 0;
+    margin-right: 15px;
+    margin-bottom: 0;
+    margin-left: 15px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
 }

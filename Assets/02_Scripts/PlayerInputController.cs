@@ -12,8 +12,6 @@ public class PlayerInputController : Controller
         base.Awake();
         camera = Camera.main;
     }
-
-
     public void OnMove(InputValue value)
     {
         Vector2 moveInput = value.Get<Vector2>().normalized;

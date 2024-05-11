@@ -1,0 +1,16 @@
+.ImgTemp {
+    flex-shrink: 0;
+}
+
+.PlayerWhite {
+    background-image: url('project://database/Assets/05_Sprites/Character/Player/White/Player_idle.png?fileID=495511270&guid=c747c84d4087f334da832601aa45dbe1&type=3#Player_idle_0');
+    width: 500px;
+    height: 500px;
+}
+
+.PlayerMale {
+    background-image: url('project://database/Assets/05_Sprites/Character/Player/Male/player.png?fileID=-1308225575&guid=bfb6392d850d4e84da451deb33cb4ca6&type=3#player_0');
+    width: 250px;
+    height: 250px;
+    top: -35px;
+}

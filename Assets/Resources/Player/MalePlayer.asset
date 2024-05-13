@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d800ea942b1af740b9e55d78997bab1, type: 3}
-  m_Name: WhitePlayer
+  m_Name: MalePlayer
   m_EditorClassIdentifier: 
-  sprite: {fileID: 495511270, guid: c747c84d4087f334da832601aa45dbe1, type: 3}
-  AniPrefab: {fileID: 5289833753137053860, guid: 42c7b23ee8afa664f9b4f4f17b624cc3, type: 3}
-  speed: 3
-  spriteType: 1
+  sprite: {fileID: -1308225575, guid: bfb6392d850d4e84da451deb33cb4ca6, type: 3}
+  AniPrefab: {fileID: 4139316978688336420, guid: e6772919a528e8d4694ff263ed4307ea, type: 3}
+  speed: 5
+  spriteType: 0

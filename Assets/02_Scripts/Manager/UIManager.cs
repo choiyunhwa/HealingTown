@@ -87,7 +87,6 @@ public class UIManager : MonoBehaviour
         ShowSelectView(peopleView);
     }
 
-
     private string GetCurrentDate()
     {
         return DateTime.Now.ToString(" HH:mm ");

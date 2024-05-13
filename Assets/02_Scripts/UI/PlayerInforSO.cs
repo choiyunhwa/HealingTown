@@ -1,8 +1,13 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "Assets/Resources/Player/PlayerData", menuName = "PlayerData", order = 0)]
-public class PlayerInforSO : ScriptableObject
+public enum EspriteType
 {
-    public AnimationController controller;
+    BASIC,
+    MIDDLE,
+}
 
+[CreateAssetMenu(fileName = "Assets/Resources/Player/PlayerData", menuName = "Person/Player", order = 0)]
+public class PlayerInforSo : PersonInforSO
+{
+    public EspriteType spriteType = EspriteType.BASIC;
 }

@@ -6,7 +6,7 @@ public enum EspriteType
     MIDDLE,
 }
 
-[CreateAssetMenu(fileName = "Assets/Resources/Player/PlayerData", menuName = "Person/Player", order = 0)]
+[CreateAssetMenu(fileName = "Assets/Resources/Player/PlayerData", menuName = "Person/Player", order = 1)]
 public class PlayerInforSO : PersonInforSO
 {
     public EspriteType spriteType = EspriteType.BASIC;

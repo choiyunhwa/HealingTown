@@ -27,15 +27,15 @@ public class CheckPeopleView : UIView
         closeButton.clicked += OnClickCloseButton;
     }
 
-    private void UpdatePeopleInfor(List<PersonInforSO> peoples)
+    private void UpdatePeopleInfor(List<NPCInforSO> peoples)
     {
-        foreach(PersonInforSO people in peoples)
+        foreach(NPCInforSO people in peoples)
         {
             CreatePeopleInfor(people, AttendanceList);
         }
     }
 
-    private void CreatePeopleInfor(PersonInforSO person, VisualElement parentVisual)
+    private void CreatePeopleInfor(NPCInforSO person, VisualElement parentVisual)
     {
         if (inforFrame == null)
             return;
@@ -43,6 +43,7 @@ public class CheckPeopleView : UIView
         TemplateContainer inforElem = inforFrame.Instantiate();
 
         Label nameText = inforElem.Q<Label>("CheckPeople_text");
+        
         nameText.text = person.name;
             
         parentVisual.Add(inforElem);

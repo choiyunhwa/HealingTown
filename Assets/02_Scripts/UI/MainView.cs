@@ -33,17 +33,6 @@ public class MainView : UIView
     {
         base.RegisterButtonCallback();
     }
-
-    public override void Show()
-    { 
-        base.Show();
-    }
-
-    public override void Hide()
-    {
-        base.Hide();
-    }
-
     public void GetCurrentTime(string time)
     {
         timeLabel.text = time;
@@ -51,12 +40,13 @@ public class MainView : UIView
 
     private void OnClickVisitorsView()
     {
-        UIManager.instance.PeopleViewEvent?.Invoke();        
+        GameManager.Instance.UpdateAttendData();
+        UIManager.Instance.PeopleViewEvent?.Invoke();        
     }
 
     private void OnClickPlayerSettingView()
     {
-        UIManager.instance.PlayerSettingViewEvent?.Invoke();
+        UIManager.Instance.PlayerSettingViewEvent?.Invoke();
     }
 }
 

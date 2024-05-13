@@ -46,4 +46,6 @@ public class PlayerController : MonoBehaviour
 
         playerName.text = DataManager.Instance.gameData.playerName;
     }
+
+
 }

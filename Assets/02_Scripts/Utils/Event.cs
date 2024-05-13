@@ -10,4 +10,6 @@ public static class Event
 
     public static Action<string> currentTime;
 
+    public static Action<NPCValue> chatEvent;
+
 }

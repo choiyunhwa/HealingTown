@@ -21,9 +21,6 @@ public class CheckPeopleView : UIView
         inforFrame = Resources.Load<VisualTreeAsset>("CheckPeopleTemp");          
         
     }
-
-
-
     protected override void RegisterButtonCallback()
     {
         base.RegisterButtonCallback();
@@ -78,4 +75,3 @@ public class CheckPeopleView : UIView
         Hide();
     }
 }
-

@@ -3,17 +3,20 @@
     <ui:Template name="CheckPeopleView" src="project://database/Assets/08_UI/UXML/CheckPeopleView.uxml?fileID=9197481963319205126&amp;guid=8dd3bd0f23c81514dba2c637c0c29e05&amp;type=3#CheckPeopleView" />
     <Style src="project://database/Assets/08_UI/CSS/BasicSytle.uss?fileID=7433441132597879392&amp;guid=843911f36a2c35747b3bd5f02c157f73&amp;type=3#BasicSytle" />
     <Style src="project://database/Assets/08_UI/CSS/GameViewStyle.uss?fileID=7433441132597879392&amp;guid=568f2da25b6dc3d4a82c65311c0cdc3c&amp;type=3#GameViewStyle" />
-    <ui:VisualElement name="MainView" picking-mode="Ignore" style="overflow: hidden; position: relative;">
-        <ui:VisualElement style="flex-grow: 0; width: 100%; height: 140px; justify-content: space-between; align-items: center; padding-right: 30px; flex-direction: row; padding-left: 30px;">
-            <ui:VisualElement style="flex-grow: 0; background-image: url(&apos;project://database/Assets/05_Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=-512791743&amp;guid=94a7bbcf1ad0f5749b44fcaa967de301&amp;type=3#Sprite sheet for Basic Pack_209&apos;); width: 250px; height: 100px; justify-content: center; align-items: center; flex-direction: row;">
-                <ui:Label tabindex="-1" text="00 : 00" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Time_Text" style="margin-top: 0; margin-right: 0; margin-bottom: 10px; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: middle-center; font-size: 35px; -unity-font-definition: initial; -unity-font: url(&apos;project://database/Assets/09_Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=b35504d289cd917479af77f55a6ad6b1&amp;type=3#NotInter-Regular&apos;); -unity-font-style: bold; color: rgb(255, 255, 255);" />
-            </ui:VisualElement>
-            <ui:VisualElement style="flex-direction: row;">
-                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayPeople_Button" class="SquareButton ChracterBtn" />
-                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Setting_Button" class="SquareButton SettingBtn" />
+    <ui:VisualElement name="BaseView" style="width: 100%; height: 100%; position: relative; justify-content: space-between;">
+        <ui:VisualElement name="MainView" picking-mode="Ignore" style="overflow: hidden; position: relative;">
+            <ui:VisualElement style="flex-grow: 0; width: 100%; height: 140px; justify-content: space-between; align-items: center; padding-right: 30px; flex-direction: row; padding-left: 30px;">
+                <ui:VisualElement style="flex-grow: 0; background-image: url(&apos;project://database/Assets/05_Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=-512791743&amp;guid=94a7bbcf1ad0f5749b44fcaa967de301&amp;type=3#Sprite sheet for Basic Pack_209&apos;); width: 250px; height: 100px; justify-content: center; align-items: center; flex-direction: row;">
+                    <ui:Label tabindex="-1" text="00 : 00" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Time_Text" style="margin-top: 0; margin-right: 0; margin-bottom: 10px; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: middle-center; font-size: 35px; -unity-font-definition: initial; -unity-font: url(&apos;project://database/Assets/09_Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=b35504d289cd917479af77f55a6ad6b1&amp;type=3#NotInter-Regular&apos;); -unity-font-style: bold; color: rgb(255, 255, 255);" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row;">
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayPeople_Button" class="SquareButton ChracterBtn" />
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Setting_Button" class="SquareButton SettingBtn" />
+                </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
+        <ui:Instance template="PlayerSetting" name="PlayerSetting" style="position: absolute; width: 100%; height: 100%; display: none;" />
+        <ui:Instance template="CheckPeopleView" name="CheckPeopleView" style="position: absolute; width: 100%; height: 100%; display: none;" />
+        <ui:VisualElement name="BottomView" picking-mode="Ignore" style="width: 100%;" />
     </ui:VisualElement>
-    <ui:Instance template="PlayerSetting" name="PlayerSetting" style="position: absolute; width: 100%; height: 100%; display: none;" />
-    <ui:Instance template="CheckPeopleView" name="CheckPeopleView" style="position: absolute; width: 100%; height: 100%; display: none;" />
 </ui:UXML>

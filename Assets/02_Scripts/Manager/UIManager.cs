@@ -16,11 +16,15 @@ public class UIManager : MonoBehaviour
     private const string MainView = "MainView";
     private const string PlayerSettingView = "PlayerSetting";
     private const string CheckPeopleView = "CheckPeopleView";
+    private const string BaseView = "BaseView";
+
 
     private UIDocument doc;
     private UIView mainView;
     private UIView playerSettingView;
     private UIView peopleView;
+
+    private UIView chatView;
 
     private List<UIView> uiView = new List<UIView>();
 
@@ -50,6 +54,8 @@ public class UIManager : MonoBehaviour
         mainView = new MainView(doc.rootVisualElement.Q<VisualElement>(MainView));
         playerSettingView = new PlayerSettingView(doc.rootVisualElement.Q<VisualElement>(PlayerSettingView));
         peopleView = new CheckPeopleView(doc.rootVisualElement.Q<VisualElement>(CheckPeopleView));
+
+        chatView = new ChatWindowView(doc.rootVisualElement.Q<VisualElement>(BaseView));
 
         uiView.Add(mainView);
         uiView.Add(playerSettingView);

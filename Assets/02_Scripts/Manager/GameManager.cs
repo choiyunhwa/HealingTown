@@ -35,4 +35,6 @@ public class GameManager : MonoBehaviour
         Event.AttendanceEvent?.Invoke(attendance);
         
     }
+
+
 }

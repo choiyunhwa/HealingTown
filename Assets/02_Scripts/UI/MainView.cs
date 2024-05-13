@@ -49,5 +49,5 @@ public class MainView : UIView
     {
         UIManager.Instance.PlayerSettingViewEvent?.Invoke();
     }
-}
+} 
 

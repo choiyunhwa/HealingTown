@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/08_UI/CSS/PlayerSettingSytle.uss?fileID=7433441132597879392&amp;guid=c3723dd11f13533498fe6680ba24f519&amp;type=3#PlayerSettingSytle" />
+    <ui:VisualElement picking-mode="Ignore" style="height: 100%; width: 100%; justify-content: flex-end; align-items: center; flex-grow: 1;">
+        <ui:VisualElement style="background-image: url(&apos;project://database/Assets/05_Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=2068992501&amp;guid=94a7bbcf1ad0f5749b44fcaa967de301&amp;type=3#Sprite sheet for Basic Pack_211&apos;); width: 1000px; height: 350px; margin-bottom: 40px;">
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="NPC_CloseBtn" class="CloseButton" style="width: 75px; height: 75px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; background-color: rgba(188, 188, 188, 0); position: absolute; right: 30px; top: 15px;" />
+            <ui:VisualElement style="position: absolute; width: 200px; height: 200px; left: 70px; top: 70px; overflow: hidden; justify-content: center; align-items: center;">
+                <ui:VisualElement name="NPC_Chat_Img" style="width: 400px; height: 400px; overflow: visible; flex-grow: 1; flex-shrink: 0; top: 60px; left: 10px;" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ChatLabel" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; font-size: 80px; position: absolute; top: 145px; left: 400px; width: 500px; max-width: 500px; -unity-text-align: middle-left;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

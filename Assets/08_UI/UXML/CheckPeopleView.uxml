@@ -1,9 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/08_UI/CSS/BasicSytle.uss?fileID=7433441132597879392&amp;guid=843911f36a2c35747b3bd5f02c157f73&amp;type=3#BasicSytle" />
+    <Style src="project://database/Assets/08_UI/CSS/PlayerSettingSytle.uss?fileID=7433441132597879392&amp;guid=c3723dd11f13533498fe6680ba24f519&amp;type=3#PlayerSettingSytle" />
     <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; align-items: flex-end;">
-        <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 400px; height: 100%; background-image: url(&apos;project://database/Assets/05_Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=579145769&amp;guid=94a7bbcf1ad0f5749b44fcaa967de301&amp;type=3#Sprite sheet for Basic Pack_101&apos;); align-items: center; justify-content: center;">
-            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="CheckPeople_CloseButton" class="SquareButton" style="background-image: url(&apos;project://database/Assets/05_Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=-1247886702&amp;guid=94a7bbcf1ad0f5749b44fcaa967de301&amp;type=3#Sprite sheet for Basic Pack_25&apos;); position: absolute; right: 35px; top: 50px;" />
-            <ui:VisualElement name="CheckPeople_ListView" style="flex-grow: 1; position: absolute; height: 90%; width: 70%;" />
+        <ui:VisualElement name="VisualElement" picking-mode="Ignore" style="flex-grow: 1; width: 400px; height: 100%; background-image: url(&apos;project://database/Assets/05_Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=579145769&amp;guid=94a7bbcf1ad0f5749b44fcaa967de301&amp;type=3#Sprite sheet for Basic Pack_101&apos;); align-items: center; justify-content: center;">
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="CheckPeople_CloseButton" class="SquareButton CloseButton" style="position: absolute; right: 35px; top: 60px; width: 80px; height: 80px;" />
+            <ui:VisualElement name="CheckPeople_ListView" picking-mode="Ignore" style="flex-grow: 1; position: absolute; height: 80%; width: 70%; top: 160px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

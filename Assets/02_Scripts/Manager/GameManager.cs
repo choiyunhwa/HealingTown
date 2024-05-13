@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public List<PlayerInforSO> players = new List<PlayerInforSO>();
-   
+    public List<PersonInforSO> attendance = new List<PersonInforSO>();
+
     private void Awake()
     {
         if (Instance != null)
@@ -27,9 +28,5 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         Event.currentTime?.Invoke(DateTime.Now.ToString(" HH:mm "));
-    }
-    private void GetCurrentDate(string time)
-    {
-        
     }
 }

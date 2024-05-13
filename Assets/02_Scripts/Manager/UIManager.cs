@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
 
     private const string MainView = "MainView";
     private const string PlayerSettingView = "PlayerSetting";
-    private const string CheckPeopleView = "";
+    private const string CheckPeopleView = "CheckPeopleView";
 
     private UIDocument doc;
     private UIView mainView;
@@ -54,10 +54,6 @@ public class UIManager : MonoBehaviour
         uiView.Add(playerSettingView);
         uiView.Add(peopleView);
 
-    }
-    public void Update()
-    {
-       
     }
 
     public void ShowSelectView(UIView _currentView)

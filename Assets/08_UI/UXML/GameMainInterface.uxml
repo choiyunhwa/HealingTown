@@ -1,5 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Template name="PlayerSetting" src="project://database/Assets/08_UI/UXML/PlayerSetting.uxml?fileID=9197481963319205126&amp;guid=bad7c621ee8fd454c84f44d5db130a74&amp;type=3#PlayerSetting" />
+    <ui:Template name="CheckPeopleView" src="project://database/Assets/08_UI/UXML/CheckPeopleView.uxml?fileID=9197481963319205126&amp;guid=8dd3bd0f23c81514dba2c637c0c29e05&amp;type=3#CheckPeopleView" />
     <Style src="project://database/Assets/08_UI/CSS/BasicSytle.uss?fileID=7433441132597879392&amp;guid=843911f36a2c35747b3bd5f02c157f73&amp;type=3#BasicSytle" />
     <Style src="project://database/Assets/08_UI/CSS/GameViewStyle.uss?fileID=7433441132597879392&amp;guid=568f2da25b6dc3d4a82c65311c0cdc3c&amp;type=3#GameViewStyle" />
     <ui:VisualElement name="MainView" picking-mode="Ignore" style="overflow: hidden; position: relative;">
@@ -14,4 +15,5 @@
         </ui:VisualElement>
     </ui:VisualElement>
     <ui:Instance template="PlayerSetting" name="PlayerSetting" style="position: absolute; width: 100%; height: 100%; display: none;" />
+    <ui:Instance template="CheckPeopleView" name="CheckPeopleView" style="position: absolute; width: 100%; height: 100%; display: none;" />
 </ui:UXML>

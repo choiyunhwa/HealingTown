@@ -53,16 +53,16 @@ public class ChoicePlayerView : MonoBehaviour
         playButton.RegisterCallback<ClickEvent>(OnClickPlayButton);
     }
 
-    private void UpdateCharacterData(List<PlayerInforSo> playerTypes)
+    private void UpdateCharacterData(List<PlayerInforSO> playerTypes)
     {
 
-        foreach(PlayerInforSo playerType in playerTypes)
+        foreach(PlayerInforSO playerType in playerTypes)
         {
             CreatePlayerImg(playerType, playerList);
         }
     }
 
-    private void CreatePlayerImg(PlayerInforSo playerType, VisualElement parentVisual)
+    private void CreatePlayerImg(PlayerInforSO playerType, VisualElement parentVisual)
     {
         if (playerFrame == null)
             return;

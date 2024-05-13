@@ -10,6 +10,11 @@ public class Rotation : MonoBehaviour
     private void Awake()
     {
         controller = GetComponent<Controller>(); 
+        
+    }
+
+    private void OnEnable()
+    {
         playerRanderer = GetComponentInChildren<SpriteRenderer>();
     }
 

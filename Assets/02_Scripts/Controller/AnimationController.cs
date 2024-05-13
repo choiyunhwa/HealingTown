@@ -7,7 +7,7 @@ public class AnimationController : MonoBehaviour
     protected Controller controller;
     protected Animator animator;
 
-    protected virtual void Awake()
+    protected virtual void OnEnable()
     {
         controller = GetComponent<Controller>();
         animator = GetComponentInChildren<Animator>();

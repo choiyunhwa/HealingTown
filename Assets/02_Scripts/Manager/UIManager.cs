@@ -41,7 +41,6 @@ public class UIManager : MonoBehaviour
             doc = GetComponent<UIDocument>();
 
         InitSetting();
-        ShowMainView();
 
         PlayerSettingViewEvent += ShowPlayerSettingView;
         PeopleViewEvent += ShowCheckPeopleView;
@@ -56,7 +55,6 @@ public class UIManager : MonoBehaviour
         uiView.Add(mainView);
         uiView.Add(playerSettingView);
         uiView.Add(peopleView);
-
     }
 
     public void ShowSelectView(UIView _currentView)
@@ -64,7 +62,7 @@ public class UIManager : MonoBehaviour
         if(currentView != null)
             currentView.Hide();
 
-        //preView = currentView;
+        preView = currentView;
         currentView = _currentView;
 
         if(currentView != null)
@@ -79,14 +77,16 @@ public class UIManager : MonoBehaviour
     public void ShowPlayerSettingView()
     {
         playerSettingView.Show();
-        //preView = currentView;
+        preView = currentView;
         ShowSelectView(playerSettingView);
     }
     public void ShowCheckPeopleView()
     {
         peopleView.Show();
-        //preView = currentView;
+        preView = currentView;
         ShowSelectView(peopleView);
     }  
+
+
 }
 

@@ -1,7 +1,3 @@
-.ImgTemp {
-    flex-shrink: 0;
-}
-
 .PlayerWhite {
     background-image: url('project://database/Assets/05_Sprites/Character/Player/White/Player_idle.png?fileID=495511270&guid=c747c84d4087f334da832601aa45dbe1&type=3#Player_idle_0');
     width: 500px;
@@ -13,4 +9,29 @@
     width: 250px;
     height: 250px;
     top: -35px;
+}
+
+.ImgTemp {
+    flex-shrink: 0;
+}
+
+.FrameImg {
+    flex-grow: 0;
+    width: 250px;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    height: 250px;
+    background-image: url('project://database/Assets/05_Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=-494873977&guid=94a7bbcf1ad0f5749b44fcaa967de301&type=3#Sprite sheet for Basic Pack_54');
+}
+
+.FrameImg:active {
+}
+
+.FrameImg:hover {
+    -unity-background-image-tint-color: rgb(197, 197, 197);
 }

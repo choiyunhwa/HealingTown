@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/08_UI/CSS/ChoiceTempStyle.uss?fileID=7433441132597879392&amp;guid=4bfbfc1528094bb43a2a54f3fed589a1&amp;type=3#ChoiceTempStyle" />
-    <ui:VisualElement name="Character_Frame" style="flex-grow: 0; width: 250px; flex-shrink: 0; justify-content: center; align-items: center; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; height: 250px; background-image: url(&apos;project://database/Assets/05_Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=-494873977&amp;guid=94a7bbcf1ad0f5749b44fcaa967de301&amp;type=3#Sprite sheet for Basic Pack_54&apos;);">
+    <ui:VisualElement name="Character_Frame" class="FrameImg">
         <ui:VisualElement name="Character_Img" picking-mode="Ignore" class="ImgTemp" />
     </ui:VisualElement>
 </ui:UXML>

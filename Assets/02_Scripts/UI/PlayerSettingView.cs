@@ -7,14 +7,20 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PlayerSettingView : UIView
 {
-    private Button SelectCharacterBtn;
-    private Button ChangeNameBtn;
 
-    private VisualElement[] settingViews = new VisualElement[3];
+    private bool isInputComplete = false;
+
+    private Button selectCharacterBtn;
+    private Button changeNameBtn;
+    private Button closeBtn;
+    private Button CheckBtn;
 
     private List<string> name = new List<string>() { "SettingButtonsView", "SettingChracter_ListView", "SettingChracter_Name" };
+    private VisualElement[] settingViews = new VisualElement[3];
     private VisualTreeAsset playerFrame;
-    
+
+    private TextField playerName;
+
     private GameData gameData;
 
     public PlayerSettingView(VisualElement _root) : base(_root)
@@ -27,40 +33,34 @@ public class PlayerSettingView : UIView
 
         gameData = DataManager.Instance.gameData;
 
-        SelectCharacterBtn = root.Q<Button>("SelectChracter_Button");
-        ChangeNameBtn = root.Q<Button>("ChangeName_Button");  
+        selectCharacterBtn = root.Q<Button>("SelectChracter_Button");
+        changeNameBtn = root.Q<Button>("ChangeName_Button");
+        closeBtn = root.Q<Button>("Setting_CloseButton");
+        CheckBtn = root.Q<Button>("Setting_PlayButton");
 
-        for(int i = 0; i < name.Count; i++)
+        for (int i = 0; i < name.Count; i++)
         {
             settingViews[i] = root.Q<VisualElement>(name[i]);
         }
 
         playerFrame = Resources.Load<VisualTreeAsset>("CharacterChoiceTemp");
 
+        playerName = root.Q<TextField>("Setting_Name_TextField");
 
-        SelectCharacterBtn.clicked += OnClickSelectCh;
-        ChangeNameBtn.clicked += OnClickChangeName;
+        selectCharacterBtn.clicked += OnClickSelectCh;
+        changeNameBtn.clicked += OnClickChangeName;
+        closeBtn.clicked += OnClickClose;
+        CheckBtn.clicked += OnClickCheck;
 
         Event.PlayerUpdateEvent += UpdataCharacterData;
     }
     protected override void RegisterButtonCallback()
     {
         base.RegisterButtonCallback();
+        playerName.RegisterCallback<BlurEvent>(ChangePlayerName);
     }
-
-    public override void Show()
-    {
-        base.Show();
-    }
-
-    public override void Hide()
-    {
-        base.Hide();
-    }
-
     private void OnClickChangeName()
-    {
-        
+    {        
         ShowVisualElement(2);
     }
 
@@ -69,7 +69,12 @@ public class PlayerSettingView : UIView
         Event.PlayerUpdateEvent.Invoke(GameManager.Instance.players);
         ShowVisualElement(1);
     }
-    
+
+    private void OnClickClose()
+    {
+        Hide();
+    }
+
     private void ShowVisualElement(int num)
     {
         for(int i = 0; i < name.Count; i++)
@@ -117,10 +122,40 @@ public class PlayerSettingView : UIView
             //캐릭터가 변경되어야함
             gameData.playerInfor = playerType;
             Event.UpdateGameData?.Invoke(gameData);
+            Hide();
         });
 
         parentVisual.Add(playerElem);
     }
+
+    private void ChangePlayerName(BlurEvent evt)
+    {
+        var textField = evt.target as TextField;
+
+        if (textField.value != null)
+            textField.value = null;
+
+        string name = textField.value;
+        if (name.Length >= 2 && name.Length <= 10)
+        {
+            gameData.playerName = name;           
+
+            isInputComplete = true;
+            CheckBtn.SetEnabled(true);
+        }
+        else
+            isInputComplete = false;
+    }
+
+    private void OnClickCheck()
+    {
+        //플레이어 이름 저장 후 페이지 닫힘
+        if(isInputComplete)
+            Event.UpdateGameData?.Invoke(gameData);
+
+        Hide();
+    }
+
 
 }
 

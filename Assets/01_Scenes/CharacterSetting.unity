@@ -338,7 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players:
   - {fileID: 11400000, guid: 8bddeda223797c6419584687c3f2d035, type: 2}
-  - {fileID: 11400000, guid: 8e8efdd0ba52d5649920ecb2d8fa2a5d, type: 2}
+  - {fileID: 11400000, guid: fc4238f2e88266145903e92fc8da8856, type: 2}
 --- !u!4 &1858263412
 Transform:
   m_ObjectHideFlags: 0

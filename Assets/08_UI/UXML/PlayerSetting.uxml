@@ -1,12 +1,20 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/08_UI/CSS/PlayerSettingSytle.uss?fileID=7433441132597879392&amp;guid=c3723dd11f13533498fe6680ba24f519&amp;type=3#PlayerSettingSytle" />
+    <Style src="project://database/Assets/08_UI/CSS/BasicSytle.uss?fileID=7433441132597879392&amp;guid=843911f36a2c35747b3bd5f02c157f73&amp;type=3#BasicSytle" />
     <ui:VisualElement name="Overlay" picking-mode="Ignore" style="width: 100%; height: 100%; position: absolute; background-color: rgba(0, 0, 0, 0.14); justify-content: center; align-items: center;">
         <ui:VisualElement picking-mode="Ignore" style="background-image: url(&apos;project://database/Assets/05_Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=-9270151&amp;guid=94a7bbcf1ad0f5749b44fcaa967de301&amp;type=3#Sprite sheet for Basic Pack_56&apos;); width: 1000px; height: 700px; justify-content: flex-start; align-items: center; padding-top: 60px; padding-right: 40px; padding-bottom: 40px; padding-left: 40px;">
             <ui:VisualElement style="background-image: url(&apos;project://database/Assets/05_Sprites/UI/Sprite%20sheet%20for%20Basic%20Pack.png?fileID=-1127269636&amp;guid=94a7bbcf1ad0f5749b44fcaa967de301&amp;type=3#Sprite sheet for Basic Pack_269&apos;); width: 130px; height: 110px;" />
-            <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 100%; align-items: center; justify-content: space-around; flex-direction: row; padding-right: 50px; padding-left: 50px;">
-                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="SelectChracter_Button" text="캐릭터 &#10;선택" class="SelectButton" />
-                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="ChangeName_Button" text="이름&#10;변경" class="SelectButton" />
-                <ui:TextField picking-mode="Ignore" max-length="11" style="-unity-font: url(&apos;project://database/Assets/09_Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=b35504d289cd917479af77f55a6ad6b1&amp;type=3#NotInter-Regular&apos;); font-size: 40px; -unity-text-align: middle-center; display: none;" />
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" class="SquareButton CloseButton" style="position: absolute; right: 50px;" />
+            <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 100%; align-items: center; justify-content: center; flex-direction: row; padding-right: 50px; padding-left: 50px;">
+                <ui:VisualElement name="SettingButtonsView" style="flex-direction: row; width: 100%; justify-content: space-around; display: flex;">
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="SelectChracter_Button" text="캐릭터 &#10;선택" class="SelectButton" />
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="ChangeName_Button" text="이름&#10;변경" class="SelectButton" />
+                </ui:VisualElement>
+                <ui:VisualElement name="SettingChracter_ListView" style="flex-grow: 1; flex-direction: row; justify-content: space-between; width: 80%; height: 100%;" />
+                <ui:VisualElement name="SettingChracter_Name" style="flex-direction: column; justify-content: space-around; width: 90%; position: absolute; align-items: center; height: 300px; display: none;">
+                    <ui:TextField picking-mode="Ignore" max-length="11" name="Setting_Name_TextField" style="-unity-font: url(&apos;project://database/Assets/09_Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=b35504d289cd917479af77f55a6ad6b1&amp;type=3#NotInter-Regular&apos;); font-size: 40px; -unity-text-align: middle-center;" />
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Setting_Button" class="Button" style="height: 90px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+                </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

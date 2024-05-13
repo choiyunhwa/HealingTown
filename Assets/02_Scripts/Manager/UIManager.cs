@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.IMGUI.Controls;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -24,6 +25,7 @@ public class UIManager : MonoBehaviour
     private List<UIView> uiView = new List<UIView>();
 
     private UIView currentView;
+    private UIView preView;
 
     public void Awake()
     {
@@ -51,6 +53,7 @@ public class UIManager : MonoBehaviour
         playerSettingView = new PlayerSettingView(doc.rootVisualElement.Q<VisualElement>(PlayerSettingView));
         peopleView = new CheckPeopleView(doc.rootVisualElement.Q<VisualElement>(CheckPeopleView));
 
+        uiView.Add(mainView);
         uiView.Add(playerSettingView);
         uiView.Add(peopleView);
 
@@ -61,6 +64,7 @@ public class UIManager : MonoBehaviour
         if(currentView != null)
             currentView.Hide();
 
+        //preView = currentView;
         currentView = _currentView;
 
         if(currentView != null)
@@ -75,19 +79,14 @@ public class UIManager : MonoBehaviour
     public void ShowPlayerSettingView()
     {
         playerSettingView.Show();
+        //preView = currentView;
         ShowSelectView(playerSettingView);
     }
     public void ShowCheckPeopleView()
     {
         peopleView.Show();
+        //preView = currentView;
         ShowSelectView(peopleView);
-    }
-
-    private string GetCurrentDate()
-    {
-        return DateTime.Now.ToString(" HH:mm ");
-    }
-    
-
+    }  
 }
 

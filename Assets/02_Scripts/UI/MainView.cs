@@ -23,6 +23,7 @@ public class MainView : UIView
         playerSettingBtn = root.Q<Button>("Setting_Button");
         timeLabel = root.Q<Label>("Time_Text");
 
+        Event.currentTime += GetCurrentTime;
 
         checkPeopleNumBtn.clicked += OnClickVisitorsView;
         playerSettingBtn.clicked += OnClickPlayerSettingView;
@@ -45,7 +46,7 @@ public class MainView : UIView
 
     public void GetCurrentTime(string time)
     {
-
+        timeLabel.text = time;
     }
 
     private void OnClickVisitorsView()

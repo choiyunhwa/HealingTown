@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d800ea942b1af740b9e55d78997bab1, type: 3}
+  m_Script: {fileID: 0}
   m_Name: WhitePlayer
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInforSO
   sprite: {fileID: 495511270, guid: c747c84d4087f334da832601aa45dbe1, type: 3}
   AniPrefab: {fileID: 5289833753137053860, guid: 42c7b23ee8afa664f9b4f4f17b624cc3, type: 3}
   speed: 3

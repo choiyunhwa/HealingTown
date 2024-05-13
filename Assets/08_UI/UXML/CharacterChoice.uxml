@@ -5,7 +5,7 @@
             <ui:VisualElement style="flex-grow: 1; width: 100%;">
                 <ui:VisualElement name="CharcterListView" style="width: 100%; flex-direction: row; justify-content: space-between; padding-right: 60px; padding-left: 60px; position: absolute;" />
                 <ui:VisualElement picking-mode="Ignore" name="CharacterNameView" style="flex-grow: 1; width: 100%; align-items: center; justify-content: center; display: none;">
-                    <ui:TextField picking-mode="Ignore" max-length="12" name="ChracterName_TextField" />
+                    <ui:TextField picking-mode="Ignore" max-length="12" name="ChracterName_TextField" style="font-size: 40px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" enable-rich-text="false" name="PlayButton" class="Button" style="border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); height: 100px;" />

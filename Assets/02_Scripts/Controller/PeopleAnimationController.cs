@@ -16,5 +16,8 @@ public class PeopleAnimationController : AnimationController
     private void Move(Vector2 vector)
     {
         animator.SetBool(isWalking, vector.magnitude > magnituteThreshold);
+
+        animator.SetFloat("xDir", vector.x);
+        animator.SetFloat("yDir", vector.y);
     }    
 }

@@ -20,7 +20,7 @@
 }
 
 .Button:hover {
-    -unity-background-image-tint-color: rgba(200, 200, 200, 0.76);
+    -unity-background-image-tint-color: rgb(200, 200, 200);
 }
 
 .SquareButton {

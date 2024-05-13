@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public List<PlayerInforSO> players = new List<PlayerInforSO>();
-    public List<NPCInforSO> attendance = new List<NPCInforSO>();
+    public List<PersonInforSO> attendance = new List<PersonInforSO>();
 
     private void Awake()
     {
@@ -33,5 +33,6 @@ public class GameManager : MonoBehaviour
     public void UpdateAttendData()
     {
         Event.AttendanceEvent?.Invoke(attendance);
+        
     }
 }

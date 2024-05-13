@@ -25,7 +25,6 @@ public class UIManager : MonoBehaviour
     private List<UIView> uiView = new List<UIView>();
 
     private UIView currentView;
-    private UIView preView;
 
     public void Awake()
     {
@@ -62,7 +61,6 @@ public class UIManager : MonoBehaviour
         if(currentView != null)
             currentView.Hide();
 
-        preView = currentView;
         currentView = _currentView;
 
         if(currentView != null)
@@ -77,13 +75,11 @@ public class UIManager : MonoBehaviour
     public void ShowPlayerSettingView()
     {
         playerSettingView.Show();
-        preView = currentView;
         ShowSelectView(playerSettingView);
     }
     public void ShowCheckPeopleView()
     {
         peopleView.Show();
-        preView = currentView;
         ShowSelectView(peopleView);
     }  
 

@@ -41,6 +41,7 @@ public class MainView : UIView
     private void OnClickVisitorsView()
     {
         GameManager.Instance.UpdateAttendData();
+        Event.UpdateGameData?.Invoke(DataManager.Instance.gameData);
         UIManager.Instance.PeopleViewEvent?.Invoke();        
     }
 

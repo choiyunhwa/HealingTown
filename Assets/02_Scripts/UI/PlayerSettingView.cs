@@ -131,9 +131,6 @@ public class PlayerSettingView : UIView
     {
         var textField = evt.target as TextField;
 
-        if (textField.value != null)
-            textField.value = null;
-
         string name = textField.value;
         if (name.Length >= 2 && name.Length <= 10)
         {

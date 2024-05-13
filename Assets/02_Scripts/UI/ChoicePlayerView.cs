@@ -60,6 +60,7 @@ public class ChoicePlayerView : MonoBehaviour
         {
             CreatePlayerImg(playerType, playerList);
         }
+
     }
 
     private void CreatePlayerImg(PlayerInforSO playerType, VisualElement parentVisual)

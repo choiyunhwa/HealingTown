@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PeopleAnimationController : AnimationController
 {
+    private SpriteRenderer playerRanderer;
+
     public static readonly int isWalking = Animator.StringToHash("isWalk");
 
     private readonly float magnituteThreshold = 0.5f;
@@ -13,11 +15,20 @@ public class PeopleAnimationController : AnimationController
         controller.OnMoveEvent += Move;
     }
 
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+
+        playerRanderer = GetComponentInChildren<SpriteRenderer>();
+    }
+
     private void Move(Vector2 vector)
     {
         animator.SetBool(isWalking, vector.magnitude > magnituteThreshold);
 
-        animator.SetFloat("xDir", vector.x);
+        playerRanderer.flipX = vector.x < 0;
+
+        animator.SetFloat("xDir", Mathf.Abs(vector.x));
         animator.SetFloat("yDir", vector.y);
     }    
 }

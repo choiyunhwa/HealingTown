@@ -15,7 +15,7 @@ public class Rotation : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("Rotation OnEnble");
+        
         playerRanderer = GetComponentInChildren<SpriteRenderer>();
     }
 

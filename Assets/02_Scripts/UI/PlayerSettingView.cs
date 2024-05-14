@@ -97,6 +97,9 @@ public class PlayerSettingView : UIView
 
     private void UpdataCharacterData(List<PlayerInforSO> playerTypes)
     {
+        if(settingViews[1].childCount != 0)
+            settingViews[1].Clear();
+
         foreach (PlayerInforSO playerType in playerTypes)
         {
             CreatePlayerImg(playerType, settingViews[1]);

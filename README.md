@@ -1,7 +1,7 @@
 <h1 align = "center"><b>🌳Healing Town🌳</b></h1>
 <div align = "center">
  
-![Title](https://github.com/choiyunhwa/HealingTown/blob/main/ReadMeImg/Game.PNG)
+<img src = "https://github.com/choiyunhwa/HealingTown/assets/101029607/e8eebb85-5019-41a2-ba5b-01ab9e89cbc7"/>
 
 </div>
 </br>

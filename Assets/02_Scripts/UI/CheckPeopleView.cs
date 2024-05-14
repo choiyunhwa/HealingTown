@@ -29,7 +29,10 @@ public class CheckPeopleView : UIView
 
     private void UpdatePeopleInfor(List<PersonInforSO> peoples)
     {
-        foreach(PersonInforSO people in peoples)
+        if(AttendanceList.childCount != null)
+            AttendanceList.Clear();
+
+        foreach (PersonInforSO people in peoples)
         {
             CreatePeopleInfor(people, AttendanceList);
         }

@@ -32,8 +32,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateAttendData()
     {
-        Event.AttendanceEvent?.Invoke(attendance);
-        
+        Event.AttendanceEvent?.Invoke(attendance);        
     }
 
 

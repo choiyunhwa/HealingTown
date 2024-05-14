@@ -57,8 +57,16 @@ public class PlayerSettingView : UIView
     protected override void RegisterButtonCallback()
     {
         base.RegisterButtonCallback();
-        playerName.RegisterCallback<KeyDownEvent>(ChangePlayerName);
+        playerName.RegisterCallback<KeyUpEvent>(ChangePlayerName);
     }
+
+    private void InitSetting()
+    {
+        ShowVisualElement(0);
+        playerName.value = " ";
+        CheckBtn.SetEnabled(false);
+    }
+
     private void OnClickChangeName()
     {        
         ShowVisualElement(2);
@@ -74,6 +82,7 @@ public class PlayerSettingView : UIView
     {
         Hide();
     }
+
 
     private void ShowVisualElement(int num)
     {
@@ -128,7 +137,7 @@ public class PlayerSettingView : UIView
         parentVisual.Add(playerElem);
     }
 
-    private void ChangePlayerName(KeyDownEvent evt)
+    private void ChangePlayerName(KeyUpEvent evt)
     {
         var textField = evt.target as TextField;   
 
@@ -144,15 +153,22 @@ public class PlayerSettingView : UIView
             isInputComplete = false;
     }
 
+
+
     private void OnClickCheck()
     {
         //플레이어 이름 저장 후 페이지 닫힘
-        if(isInputComplete)
+        if (isInputComplete)
             Event.UpdateGameData?.Invoke(gameData);
 
         Hide();
     }
 
+    public override void Hide()
+    {
+        base.Hide();
+        InitSetting();
+    }
 
 }
 

@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public List<PlayerInforSO> players = new List<PlayerInforSO>();
-    public List<PersonInforSO> attendance = new List<PersonInforSO>();
+    public List<NPCInforSO> attendance = new List<NPCInforSO>();
 
     private void Awake()
     {

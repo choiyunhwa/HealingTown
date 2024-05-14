@@ -27,12 +27,12 @@ public class CheckPeopleView : UIView
         closeButton.clicked += OnClickCloseButton;
     }
 
-    private void UpdatePeopleInfor(List<PersonInforSO> peoples)
+    private void UpdatePeopleInfor(List<NPCInforSO> peoples)
     {
         if(AttendanceList.childCount != null)
             AttendanceList.Clear();
 
-        foreach (PersonInforSO people in peoples)
+        foreach (NPCInforSO people in peoples)
         {
             CreatePeopleInfor(people, AttendanceList);
         }
@@ -43,7 +43,7 @@ public class CheckPeopleView : UIView
         CreatePeopleInfor(data, AttendanceList);
     }
 
-    private void CreatePeopleInfor(PersonInforSO person, VisualElement parentVisual)
+    private void CreatePeopleInfor(NPCInforSO person, VisualElement parentVisual)
     {
         if (inforFrame == null)
             return;

@@ -24,8 +24,14 @@ public class PlayerSettingView : UIView
 
     public PlayerSettingView(VisualElement _root) : base(_root)
     {
-
+        selectCharacterBtn.clicked += OnClickSelectCh;
+        changeNameBtn.clicked += OnClickChangeName;
+        closeBtn.clicked += OnClickClose;
+        CheckBtn.clicked += OnClickCheck;
+        Event.PlayerUpdateEvent += UpdataCharacterData;
     }
+
+    
     protected override void SetVisualElement()
     {
         base.SetVisualElement();
@@ -46,17 +52,12 @@ public class PlayerSettingView : UIView
 
         playerName = root.Q<TextField>("Setting_Name_TextField");
 
-        selectCharacterBtn.clicked += OnClickSelectCh;
-        changeNameBtn.clicked += OnClickChangeName;
-        closeBtn.clicked += OnClickClose;
-        CheckBtn.clicked += OnClickCheck;
-
-        Event.PlayerUpdateEvent += UpdataCharacterData;
+        CheckBtn.SetEnabled(false);
     }
     protected override void RegisterButtonCallback()
     {
         base.RegisterButtonCallback();
-        playerName.RegisterCallback<BlurEvent>(ChangePlayerName);
+        playerName.RegisterCallback<KeyDownEvent>(ChangePlayerName);
     }
     private void OnClickChangeName()
     {        
@@ -127,9 +128,9 @@ public class PlayerSettingView : UIView
         parentVisual.Add(playerElem);
     }
 
-    private void ChangePlayerName(BlurEvent evt)
+    private void ChangePlayerName(KeyDownEvent evt)
     {
-        var textField = evt.target as TextField;
+        var textField = evt.target as TextField;   
 
         string name = textField.value;
         if (name.Length >= 2 && name.Length <= 10)

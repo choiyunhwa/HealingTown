@@ -49,7 +49,7 @@ public class ChoicePlayerView : MonoBehaviour
 
     private void RegisterButtonCallback()
     {
-        playerNameTextField.RegisterCallback<BlurEvent>(SetPlayerTextField);
+        playerNameTextField.RegisterCallback<KeyDownEvent>(SetPlayerTextField);
         playButton.RegisterCallback<ClickEvent>(OnClickPlayButton);
     }
 
@@ -98,7 +98,7 @@ public class ChoicePlayerView : MonoBehaviour
         parentVisual.Add(playerElem);
     }
 
-    private void SetPlayerTextField(BlurEvent evt)
+    private void SetPlayerTextField(KeyDownEvent evt)
     {
         var textField = evt.target as TextField;
 

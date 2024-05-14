@@ -7,12 +7,12 @@
             <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Setting_CloseButton" class="SquareButton CloseButton" style="position: absolute; right: 50px;" />
             <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 100%; align-items: center; justify-content: center; flex-direction: row; padding-right: 50px; padding-left: 50px; display: flex;">
                 <ui:VisualElement name="SettingButtonsView" style="flex-direction: row; width: 100%; justify-content: space-around; display: flex;">
-                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="SelectChracter_Button" text="캐릭터 &#10;선택" class="SelectButton" />
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="SelectChracter_Button" text="캐릭터 &#10;변경" class="SelectButton" />
                     <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="ChangeName_Button" text="이름&#10;변경" class="SelectButton" />
                 </ui:VisualElement>
                 <ui:VisualElement name="SettingChracter_ListView" style="flex-direction: row; justify-content: space-between; width: 70%; height: 80%; display: none;" />
                 <ui:VisualElement name="SettingChracter_Name" style="flex-direction: column; justify-content: space-around; width: 90%; position: absolute; align-items: center; height: 300px; display: none;">
-                    <ui:TextField picking-mode="Ignore" max-length="11" name="Setting_Name_TextField" style="-unity-font: url(&apos;project://database/Assets/09_Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=b35504d289cd917479af77f55a6ad6b1&amp;type=3#NotInter-Regular&apos;); font-size: 40px; -unity-text-align: middle-center;" />
+                    <ui:TextField picking-mode="Ignore" max-length="11" name="Setting_Name_TextField" style="-unity-font: url(&apos;project://database/Assets/11_Font/MIMi.ttf?fileID=12800000&amp;guid=c750ddafad2b1bb428e208c1fb395873&amp;type=3#MIMi&apos;); font-size: 40px; -unity-text-align: middle-center; -unity-font-definition: initial; color: rgb(84, 59, 56);" />
                     <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Setting_PlayButton" class="Button" style="height: 90px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
                 </ui:VisualElement>
             </ui:VisualElement>
